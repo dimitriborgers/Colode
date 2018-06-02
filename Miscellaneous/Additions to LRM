@@ -1,0 +1,12 @@
+Additions to LRM
+	array, string concat
+	Matrix literals need a tilde before the left brace
+	Dot is array index operator
+	matrix are indexed by dot then pipe
+	iprint to print int
+	fprint to print float
+	mprint to print matrix
+	new(columns, rows) to create empty matrix
+	coclose takes name of file to save
+	use -> operator access image channels as matrices
+	generate_gaussian(columns, rows, sigma) to generate gaussian filter matrix

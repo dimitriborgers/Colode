@@ -1,0 +1,4 @@
+int i = 6^7;
+float b = 6 / 4;
+char c = 'c';
+string a = "alpha";

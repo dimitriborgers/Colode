@@ -1,0 +1,3 @@
+def func(int i, bool b) : void {
+	print("yay");
+}

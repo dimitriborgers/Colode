@@ -1,0 +1,41 @@
+signImage();
+def signImage() : void {
+	// Load an image and create copies for different operations
+	Image img = coload("image.png");
+	Image imgCopy = coclone(img);
+	Image rotateCopy = coclone(img);
+	Image zoomCopy = coclone(img);
+	Image cropCopy = coclone(img);
+	// Load a signature and create a copy
+	Image sign = coload("signature.png");
+	Image signCopy = coclone(sign);
+	// Close source image files
+	coclose(img);
+	coclose(sign);
+	// zoom the image by 50%
+	cozoom(rotateCopy, 50);
+	// crop the image (10% width, 20% height);
+	cocrop(cropCopy, 10, 20);
+	// rotate the image clockwise and counter-clockwise
+	corotate(rotateCopy, c);
+	corotate(rotateCopy, u);
+	// calculate the width and height for the signature
+	int s_width = imgCopy.width * 0.05;
+	int s_height = imgCopy.height * 0.05;
+	// scale the signature image if necessary
+	if signCopy.width > s_width or signCopy.height > s_height {
+		coscale(signCopy, s_width, s_height);
+	}
+	// copy over the sign
+	for i in range(0, s_width) {
+		for j in range(0, s_height) {
+			imgCopy[imgCopy.width - s_width + i][imgCopy.height - s_height + j] = signCopy[i][j];
+		}
+	}
+	// close copied image files
+	coclose(imgCopy);
+	coclose(signCopy);
+	coclose(rotateCopy);
+	coclose(cropCopy);
+	coclose(zoomCopy);
+}

@@ -1,0 +1,2 @@
+Image new = conew(67, 89);
+Image result = new ** some_convulution_kernel;
