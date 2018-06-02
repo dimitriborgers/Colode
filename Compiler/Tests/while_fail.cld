@@ -1,0 +1,6 @@
+// While w/ invalid predicate
+int three = 3;
+
+while three {
+	print("Yaasss");
+}

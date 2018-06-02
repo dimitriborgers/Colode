@@ -1,0 +1,9 @@
+//String Comparison Test
+//Yes
+string a = "ABC";
+string b = "ABC";
+if b == a {
+	print("Yes");
+} else {
+	print("No");
+}

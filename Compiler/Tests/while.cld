@@ -1,0 +1,9 @@
+//While test
+//2
+int a = 0;
+
+while a != 2 {
+	a += 1;
+}
+
+iprint(a);

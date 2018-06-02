@@ -1,0 +1,6 @@
+//String Concatenation test
+//Hello World
+string greeting = "Hello" ;
+string g = greeting + " World";
+print(g);
+

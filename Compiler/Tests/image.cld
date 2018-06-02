@@ -1,0 +1,27 @@
+
+Image img = coload("richard.png");
+Image img2 = coload("richard.png");
+Image img3 = coload("richard.png");
+matrix gaussian = generate_gaussian(10, 10, 10.0);
+print("Gaussian");
+mprint(gaussian);
+img->red = img->red ** gaussian;
+img->blue = img->blue ** gaussian;
+img->green = img->green ** gaussian;
+coclose(img, "modified_gaussian.png");
+
+print("Sharpen");
+matrix sharpen = generate_sharpen();
+mprint(sharpen);
+img2->red = img2->red ** sharpen;
+img2->blue = img2->blue ** sharpen;
+img2->green = img2->green ** sharpen;
+coclose(img2, "modified_sharpen.png");
+
+print("Edge detect");
+matrix edge = generate_edge_detect();
+mprint(edge);
+img3->red = img3->red ** edge;
+img3->blue = img3->blue ** edge;
+img3->green = img3->green ** edge;
+coclose(img3, "modified_edge_detect.png");

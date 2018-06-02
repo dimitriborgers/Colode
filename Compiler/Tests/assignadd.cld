@@ -1,0 +1,5 @@
+//Assign Add test
+//2
+int one = 1;
+one+=1;
+iprint(one);

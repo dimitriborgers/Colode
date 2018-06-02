@@ -1,0 +1,9 @@
+//If test
+//Yes
+int a = 3;
+int b = 2 + 1;
+if a == b {
+	print("Yes");
+} else {
+	print("No");
+}

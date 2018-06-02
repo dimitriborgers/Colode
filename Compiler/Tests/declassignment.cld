@@ -1,0 +1,4 @@
+//DeclAssignment expression test
+//30
+int a = int b = 30;
+iprint(a);
